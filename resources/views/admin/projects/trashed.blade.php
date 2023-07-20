@@ -35,7 +35,7 @@
                     <td>{{ $project->author }}</td>
                     <td>{{ $project->creation_date }}</td>
                     <td>{{ $project->description }}</td>
-                    <td>
+                    <td class="text-end">
                         <a class="btn btn-primary"
                             href="{{ route('admin.project.show', ['project' => $project]) }}">View</a>
                         <form class="d-inline-block" method="POST"

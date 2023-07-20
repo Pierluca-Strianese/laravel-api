@@ -1,7 +1,7 @@
 @extends('admin.layouts.base')
 
 @section('contents')
-    <section class="container-sm p-4 my-4 rounded col-4">
+    <section class="container-sm p-4 my-4 rounded col-3">
 
         @if (session('delete_success'))
             @php $tecnology = session('delete_success') @endphp
@@ -15,7 +15,7 @@
                 <tr>
                     <th scope="col">ID</th>
                     <th scope="col">Name</th>
-                    <th scope="col">Actions</th>
+                    <th scope="col"></th>
                 </tr>
             </thead>
             <tbody>
@@ -23,7 +23,7 @@
                     <tr>
                         <th scope="row">{{ $tecnology->id }}</th>
                         <td>{{ $tecnology->name }}</td>
-                        <td>
+                        <td class="text-end">
                             <a class="btn btn-warning m-1"
                                 href="{{ route('admin.tecnologies.edit', ['tecnology' => $tecnology]) }}">Edit</a>
                             <form class="d-inline-block" method="POST"

@@ -19,8 +19,6 @@ return new class extends Migration
             $table->string('title', 50);
             $table->string('slug', 80)->unique();
             $table->string('author', 30);
-            $table->date('creation_date');
-            $table->date('last_update')->nullable();
             $table->string('collaborators', 150)->nullable();
             $table->text('description')->nullable();
             $table->string('image',200)->nullable();

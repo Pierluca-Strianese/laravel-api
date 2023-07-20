@@ -40,10 +40,10 @@
                         @endforeach
                     </td>
                     <td>{{ $project->author }}</td>
-                    <td class="font-monospace">{{ $project->last_update }}</td>
+                    <td class="font-monospace">{{ $project->update_at }}</td>
                     <td>{{ $project->description }}</td>
                     <td class="text-center"> <a href="{{ $project->link_github }}"> LINK </a></td>
-                    <td class="text-center">
+                    <td class="text-end">
                         <a class="btn btn-primary m-1"
                             href="{{ route('admin.project.show', ['project' => $project]) }}">View</a>
                         <a class="btn btn-warning m-1"

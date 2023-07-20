@@ -60,28 +60,6 @@
             </div>
 
             <div class="mb-3">
-                <label for="creation_date" class="form-label">Creation Date</label>
-                <input type="date" class="form-control @error('creation_date') is-invalid @enderror" id="creation_date"
-                    name="creation_date" value="{{ old('creation_date') }}">
-                <div class="invalid-feedback">
-                    @error('creation_date')
-                        {{ $message }}
-                    @enderror
-                </div>
-            </div>
-
-            <div class="mb-3">
-                <label for="last_update" class="form-label">Last Update</label>
-                <input type="date" class="form-control @error('last_update') is-invalid @enderror" id="last_update"
-                    name="last_update" value="{{ old('last_update') }}">
-                <div class="invalid-feedback">
-                    @error('last_update')
-                        {{ $message }}
-                    @enderror
-                </div>
-            </div>
-
-            <div class="mb-3">
                 <label for="collaborators" class="form-label">Collaborators</label>
                 <input type="text" class="form-control @error('collaborators') is-invalid @enderror" id="collaborators"
                     name="collaborators" value="{{ old('collaborators') }}">

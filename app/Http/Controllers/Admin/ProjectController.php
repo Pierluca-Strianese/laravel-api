@@ -16,7 +16,6 @@ class ProjectController extends Controller
         'type_id'       => 'required|integer|exisist:types,id',
         'author'        => 'required|string|max:30',
         'image'         => 'nullable|image',
-        'creation_date' => 'required|date',
         'collaborators' => 'max:150',
         'link_github'   => 'url|max:150',
         'tecnologies'   => 'nullable|array',
@@ -59,8 +58,6 @@ class ProjectController extends Controller
         $newProject->slug               = Project::slugger($data['title']);
         $newProject->type_id            = $data['type_id'];
         $newProject->author             = $data['author'];
-        $newProject->creation_date      = $data['creation_date'];
-        $newProject->last_update        = $data['last_update'];
         $newProject->collaborators      = $data['collaborators'];
         $newProject->description        = $data['description'];
         $newProject->image              = $imagePath;
@@ -113,8 +110,6 @@ class ProjectController extends Controller
         $project->title              = $data['title'];
         $project->type_id            = $data['type_id'];
         $project->author             = $data['author'];
-        $project->creation_date      = $data['creation_date'];
-        $project->last_update        = $data['last_update'];
         $project->collaborators      = $data['collaborators'];
         $project->description        = $data['description'];
         $project->link_github        = $data['link_github'];
