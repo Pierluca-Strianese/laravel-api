@@ -8,8 +8,8 @@
 
         <div class="mb-3">
             <label for="password" class="form-label mt-2">Current Password</label>
-            <input type="password" class="form-control" id="password" name="password">
-            {{-- <x-input-error :messages="$errors->updatePassword->get('current_password')" class="mt-2" /> --}}
+            <input type="password" class="form-control" id="password" name="current_password">
+            {{--  <x-input-error :messages="$errors->updatePassword->get('current_password')" class="mt-2" /> --}}
         </div>
         <div class="mb-3">
             <label for="password" class="form-label">New Password</label>
