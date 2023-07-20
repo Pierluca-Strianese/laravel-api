@@ -12,7 +12,7 @@
         </div>
     @endif
 
-    <table class="table align-middle">
+    <table class="table align-middle table-striped">
         <thead>
             <tr>
                 <th scope="col" class="text-center">Title</th>
@@ -63,4 +63,6 @@
         <button class="btn btn-outline-danger"><a class="dropdown-item"
                 href="{{ route('admin.project.trashed') }}">Trash</a></button>
     </div>
+
+    <div class="d-flex justify-content-end p-2">{{ $projects->links() }}</div>
 @endsection
